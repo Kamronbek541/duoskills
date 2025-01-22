@@ -1,31 +1,30 @@
 /* Mobile Styles */
 @media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+        padding: 10px 5%;
+        flex-wrap: wrap;
+    }
+
     .text_discover p1 {
         font-size: 18px;
         font-weight: 400;
         line-height: 1.6;
     }
     
-    nav {
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        height: auto;
-        padding: 10px 10%;
-        flex-wrap: wrap;
-    }
 
     .img_ex {
         width: 150px; /* Resized logo for better fit */
     }
 
-
     .nav-links {
         display: flex;
         flex-direction: row;
-        gap: 20px;
+        gap: 15px;
         font-size: 16px;
         flex-wrap: wrap;
     }
@@ -38,7 +37,7 @@
         position: relative;
         display: none;
     }
-    
+      
     
     .featured-book {
         flex-direction: column;
