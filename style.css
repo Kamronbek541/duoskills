@@ -1,0 +1,939 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
+    color: white;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav, .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    justify-content: space-between;
+    height: 17vh;
+    padding: 0 5%;
+}
+
+.nav-links {
+    list-style: none;
+    gap: 40px;
+}
+
+.nav_links_btn {
+    text-decoration: none;
+    position: relative;
+    cursor: default;
+    font-size: 18px;
+}
+
+.nav_links_btn::after {
+    content: '';
+    height: 3.6px;
+    width: 10px;
+    border-radius: 14%;
+    background-color: rgb(0, 64, 255);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.nav_links_btn:hover::after {
+    opacity: 1;
+}
+
+.img_ex {
+    width: 300px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #ffffff;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 200px;
+    border-radius: 15px;
+    z-index: 100;
+    margin-top: 0px;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.5s ease;
+}
+
+.dropdown-menu li a:hover {
+    color: #551A8B;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Discover Section */
+section {
+    padding-top: 0;
+    height: auto;
+    margin: 0 4%;
+    box-sizing: border-box;
+    min-height: fit-content;
+    margin-bottom: 50px;
+}
+
+.discover_master {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.text_discover {
+    width: 40%;
+    padding-top: 200px;
+}
+
+.highlighted-word {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+}
+
+.highlighted-word::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007BFF;
+}
+
+.rotating-text {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+}
+
+.rotating-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    /* background: radial-gradient(circle, rgba(0, 0, 255, 0.5), transparent 70%); */
+    filter: blur(20px);
+    z-index: -1;
+    background-color: transparent;
+}
+
+#dynamic-text {
+    display: inline-block;
+    opacity: 0; /* Start as invisible */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in and fade-out */
+    color: white;
+    background-color: transparent;
+    /* text-shadow: 0 0 30px #00f, 0 0 80px #00f, 0 0 80px #00f, 0 0 70px #00f; */
+}
+
+.text-container {
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.text_discover p1 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.pictures_discover {
+    width: 50%;
+}
+
+.img1 {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+
+
+
+.ellipse {
+    width: 580px;
+    height: 120px;
+    /* background-color: rgba(2,116,241,0.88); */
+    background: radial-gradient(circle, rgba(2, 116, 241, 0.68), transparent 86%);
+    filter: blur(10px);
+    border-radius: 100%;
+    position: absolute;
+    margin: 20px auto;
+    top: 330px;
+    left: -30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 40px;
+    background-color: #0274F1; /* Синий цвет кнопки */
+    color: #fff; /* Белый цвет текста */
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 6px; /* Скругленные углы */
+    margin-top: 35px;
+
+}
+
+.button:hover {
+    background-color: #0056b3; /* Более темный синий при наведении */
+
+} 
+
+.info_500{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.info_500 h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+.info_500 p{
+    font-size: 18px;
+    font-weight: 400;
+}
+.box1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    height: 401px;
+}
+
+
+
+.search-course{
+    position: relative;
+}
+
+
+.search-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    left: 13%;
+    bottom: 30%;
+    margin: 0;
+    background-color: transparent;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-width: 400px;
+    width: 240px;
+    padding: 20px 20px;
+
+}
+
+.search-button {
+    background: none;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    background-color: transparent;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #555;
+    background-color: transparent;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+
+
+
+
+
+.discover-us{
+    position: relative;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 15px;
+    border-radius: 12px;
+    width: 154px;
+    height: 30px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.social-icons .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:transparent;
+
+}
+.social-icons img{
+    background-color: transparent;
+    width: 30px;
+
+}
+
+
+
+
+
+
+/* SECTION 2 | WHY CHOSE US? */
+.section2{
+    position: relative;
+    margin-top: 100px;
+}
+
+
+.ellipse1 {
+    width: 740px;
+    height: 100px;
+    /* background-color: rgba(2,116,241,0.88); */
+    background: radial-gradient(circle, rgba(2, 116, 241, 0.68), transparent 86%);
+    filter: blur(10px);
+    border-radius: 100%;
+    position: absolute;
+    top: 0px;
+    left: 23%;
+}
+
+.title_why {
+    text-align: center; /* Центрирование текста горизонтально */
+}
+
+.title_why h1 {
+    margin: 0; /* Убираем отступы, если есть */
+    font-size: 60px; /* Размер шрифта для примера */
+    color: #ffffff; /* Цвет текста */
+    background-color: transparent;
+    font-weight: 500;
+    z-index: 2;
+    position: relative;
+}
+
+
+.pic_text{
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    align-items: center;
+}
+
+
+.info_women{
+    width: 50%;
+    text-align: right;
+    margin-right: 30px;
+}
+
+
+/* SECTION 3  BOOKS COURSES*/
+
+.book{
+    position: relative;
+
+}
+
+.course{
+    position: relative;
+}
+
+.video{
+    position: relative;
+}
+
+.test{
+    position: relative;
+}
+
+.text{
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    left: 70px;
+    top: 90px;
+    background-color: transparent;
+    opacity: 0.68;
+}
+.text1{
+    font-size: 40px;
+    font-weight: normal;
+    position: absolute;
+    left: 70px;
+    top: 40px;
+    background-color: transparent;
+}
+.book_section{
+    margin: 60px 35px;
+
+}
+.books_courses{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+}
+
+.video_test{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+
+
+
+
+
+
+
+/* SECTION 3 OUR NEW COURSES */
+.section3{
+    box-sizing: border-box;
+    padding-top: 0;
+    height: auto;
+    width: 100%;
+    padding: 80px 4%;
+    min-height: fit-content;
+    margin-bottom: 20px;
+    z-index: -1;
+    background-color: #117DF4;
+}
+.section3_text{
+    background-color: transparent;
+}
+.section3_text p {
+    background-color: transparent;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.courses_desc{
+    background-color: transparent;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+
+.course_oxf{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+.course_oxf1{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card {
+    width: 392px;
+    height: 389px;
+    border-radius: 15px; /* Скругленный правый верхний угол */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .image-container {
+    position: relative;
+    background-color: transparent;
+    height: 50%;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: transparent;
+  }
+  
+  .logo-container {
+    position: absolute;
+    top: 0px;
+    right: 0px; /* Логотип слева */
+    background-color: #fff;
+    border-radius: 0 10% 0 10%; /* Скругление логотипа */
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: transparent;
+  }
+  
+  .card-content {
+    padding: 16px;
+    text-align: left; /* Выравнивание контента влево */
+    background-color: white;
+    position: relative;
+  }
+  
+  .card-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: #000;
+    background-color: transparent;
+  }
+  
+  .card-content p {
+
+    font-size: 20px;
+    margin: 8px 0;
+    color: #555;
+    background-color: transparent;
+  }
+  
+  .card-button {
+    bottom: 10px;
+    display: inline-block;
+    padding: 8px 30px;
+    font-size: 20px;
+    color: #555;
+    background-color: #f4f4f4;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+  }
+  
+  .card-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+
+.a_section3 {
+    background-color: transparent;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+
+.section3_a_text {
+    display: flex; /* Используем Flexbox для выравнивания */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание по центру */
+
+    background-color: transparent;
+  }
+
+
+
+/* SECTION4 CHOOSR YOUR TOPIC */
+.section4{
+    box-sizing: border-box;
+    padding-top: 0;
+    height: auto;
+    width: 100%;
+    padding: 80px 2%;
+    min-height: fit-content;
+    margin-bottom: 100px;
+    z-index: -1;
+    background-color: #191919;
+}
+
+.section4_text{
+    background-color: transparent;
+}
+.section4_text p {
+    background-color: transparent;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+
+.first_row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+
+.science {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border: 2px solid #1c1c1c;
+    border-radius: 12px;
+    background-color: #1c1c1c;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5), 
+                0 0 8px 3px rgba(0, 122, 255, 0.8); /* Синяя подсветка */
+    color: white;
+    text-align: center;
+}
+
+.science img {
+
+    /* width: 120px; */
+    width: 50%;
+    height: auto;
+    background-color: transparent;
+}
+
+.science p {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+.science_design{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border: 2px solid #1c1c1c;
+    border-radius: 12px;
+    background-color: #1c1c1c;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5), 
+                0 0 8px 3px rgba(0, 122, 255, 0.8); /* Синяя подсветка */
+    color: white;
+    text-align: center;
+}
+
+.science_design img {
+
+    /* width: 120px; */
+    width: 33%;
+    height: auto;
+    background-color: transparent;
+}
+
+.science_design p {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+
+
+.trust{
+    background-color: #464444;
+    height: 250px;
+    text-align: center;
+    margin-top: 120px;
+    padding: 20px;
+    
+}
+.trust p{
+    background-color: transparent;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.trust_logos{
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    margin-top: 50px;
+}
+.trust_logos img{
+    width: 120px;
+    background-color: transparent;
+}
+
+
+
+
+
+
+/* DISCOVER */
+
+.section_disc{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    position: relative;
+    background-color: transparent;
+}
+.sec4 img{
+    position: absolute;
+    bottom:-200px;
+    right: -80px;
+    background-color: transparent;
+}
+
+
+.text_discover_new{
+    width: 50%;
+    background-color: transparent;
+}
+
+.book_pic{
+    width: 50%;
+}
+
+
+.text_discover_new h1{
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.text_discover_new p{
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+/* FOOTER SECTION */
+.footer{
+    background-color: #007BFF;
+    margin-top: 180px;
+    padding: 60px 180px;
+    height: 710px;
+    position: relative;
+    overflow: hidden; /* Hides overflowing parts */
+}
+
+
+
+.footer_sec{
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    background-color: transparent;
+}
+.footer_serv{
+    background-color: transparent;
+}
+
+.footer_serv h1{
+    font-size: 16px;
+    margin-bottom: 16px;
+    font-weight: 400;
+    background-color: transparent;
+}
+.footer_serv p{
+    font-size: 16px;
+    line-height: 2.5;
+    font-weight: 300;
+    opacity: 0.7;
+    background-color: transparent;
+
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.footer_contact{
+    background-color: transparent;
+}
+.contact img{
+    background-color: transparent;
+}
+
+.footer_contact h1{
+    font-size: 16px;
+    margin-bottom: 16px;
+    font-weight: 400;
+    background-color: transparent;
+}
+.contact p{
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.7;
+    background-color: transparent;
+}
+
+
+
+.footer_design{
+    position: absolute;
+    top: 20px;
+    background-color: transparent;
+}
+
+
+
+.ring {
+    position: absolute;
+    border: 90px solid white; /* Thickness of the ring */
+    border-radius: 50%;
+    background: transparent;
+    
+}
+
+  /* Specific Rings */
+  .ring-top-right {
+    width: 400px; /* Outer width of the ring */
+    height: 400px; /* Outer height of the ring */
+    top: -200px;
+    right: -200px;
+}
+
+.ring-bottom-left {
+    width: 300px; /* Outer width of the ring */
+    height: 300px; /* Outer height of the ring */
+    bottom: -200px;
+    left: -230px;
+    opacity: 0.6;
+}
+
+
+.copywrite{
+    text-align: center;
+    background-color: transparent;
+    margin-top: 25px;
+}
+.copywrite p{
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.7;
+    background-color: transparent;
+
+}
+
+
+.info_footer{
+    padding: 0 40px;
+    margin-top: 40px;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+}
+.info_footer1{
+    background-color: transparent;
+    width: 40%;
+}
+.info_footer1 p{
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.7;
+    background-color: transparent;
+    line-height: 1.5;
+}
+
+.last_row{
+    background-color: transparent;
+    text-align: center;
+    margin-top: 60px;
+}
+.last_row img{
+    background-color: transparent;
+
+}
+.last_row p{
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.7;
+    background-color: transparent;
+    line-height: 4;
+}
