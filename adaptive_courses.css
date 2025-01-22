@@ -206,7 +206,7 @@
 
 
 .contact-form {
-    display: flex;
+    display: none;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 0px;
@@ -274,7 +274,7 @@ textarea {
 
     .footer{
         background-color: #007BFF;
-        margin-top: 180px;
+        margin-top: 0px;
         padding: 60px 5%;
         height: auto;
         position: relative;

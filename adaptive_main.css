@@ -75,11 +75,11 @@
         text-align: left;
     }
     .info_500 h1 {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .info_500 p {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .pictures_discover {
@@ -109,15 +109,40 @@
     }
 
     .search-form {
-        max-width: 100%;
-        width: 100%;
+        max-width: 90%;
+        width: 80%;
     }
 
-    .social-icons {
-        bottom: 30px;
-        right: 50%;
-        transform: translateX(50%);
-    }
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 15px;
+    border-radius: 12px;
+    width: 70%;
+    height: 30px;
+    transform: translateX(50%);
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
+}
+
+.social-icons .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:transparent;
+
+}
+.social-icons img{
+    background-color: transparent;
+    width: 100%;
+
+}
+
+
 
     .button {
         width: 80%;
@@ -367,7 +392,7 @@
         width: 80%;
         position: absolute;
         left: 40px;
-        top:40px;
+        top:70px;
     }
     .text_discover_new{
         text-align: center;
