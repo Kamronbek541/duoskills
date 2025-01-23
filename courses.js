@@ -41,7 +41,7 @@ const stripe = Stripe('your-publishable-key-here');
 
 checkoutButton.addEventListener('click', async () => {
     try {
-        const response = await fetch('/create-checkout-session', {
+        const response = await fetch('https://duoskilss-stripe-b7100e8cf8b9.herokuapp.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

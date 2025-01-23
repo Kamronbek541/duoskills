@@ -273,7 +273,6 @@ section {
 
 .search-form {
     display: flex;
-    align-items: center;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -287,16 +286,18 @@ section {
 .search-button {
     background: none;
     border: none;
-    margin-right: 10px;
+    margin-right: 0px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 0px;
+    height: 0px;
 }
 
 .search-button img {
-    width: 20px;
-    height: 20px;
+    width: 0px;
+    height: 0px;
     object-fit: contain;
     background-color: transparent;
 }

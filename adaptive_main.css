@@ -109,9 +109,20 @@
     }
 
     .search-form {
-        max-width: 90%;
+        max-width: 80%;
         width: 80%;
     }
+
+    .search-input {
+        text-align: center;
+        flex: 1;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        color: #555;
+        background-color: transparent;
+    }
+    
 
 
 .social-icons {
@@ -138,7 +149,7 @@
 }
 .social-icons img{
     background-color: transparent;
-    width: 100%;
+    width: 90%;
 
 }
 
